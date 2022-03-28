@@ -31,5 +31,5 @@ O manager Box é um projeto da disciplina de Projeto e prática 2 do IFPE - Igar
   <li>Caio Souza <a href="https://github.com/CaioSousa32">Perfil do GitHub</a></li>
   <li>Flávio Batista <a href="https://github.com/FlavioBatistaVS">Perfil do GitHub</a></li>
   <li>Zaqueu Batista <a href="https://github.com/5636b">Perfil do GitHub</a></li>
-  <li>Gabriel Barros Teixeira</li>
+  <li>Gabriel Barros Teixeira ...Pendente</li>
   </ul>
