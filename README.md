@@ -31,5 +31,5 @@ O manager Box é um projeto da disciplina de Projeto e prática 2 do IFPE - Igar
   <li>Caio Souza</li>
   <li>Flávio Batista</li>
   <li>Zaqueu Batista</li>
-  <li>Gabriel ...</li>
+  <li>Gabriel Barros Teixeira</li>
   </ul>
