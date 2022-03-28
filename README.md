@@ -23,7 +23,7 @@ O manager Box é um projeto da disciplina de Projeto e prática 2 do IFPE - Igar
   <li>API-Google charts</li>
   </ul>
   <br>
-  <span>Integrantes:</span>
+  <span>Desenvolvedores:</span>
   <ul>
   <li>Alan José</li>
   <li>Heder Matheus</li>
