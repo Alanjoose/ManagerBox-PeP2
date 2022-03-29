@@ -25,7 +25,7 @@ O manager Box é um projeto da disciplina de Projeto e prática 2 do IFPE - Igar
   <br>
   <span>Desenvolvedores:</span>
   <ul>
-  <li>Alan José</li>
+  <li>Alan José <a href="https://github.com/Alanjoose">Perfil do GitHub</a></li>
   <li>Heder Matheus <a href="https://github.com/Hederblz">Perfil do GitHub</a></li>
   <li>Jonathas Cândido <a href="https://github.com/jonatas2021">Perfil do GitHub</a></li>
   <li>Caio Souza <a href="https://github.com/CaioSousa32">Perfil do GitHub</a></li>
