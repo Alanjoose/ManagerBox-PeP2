@@ -4,7 +4,7 @@
 //@Query file;
 
 include_once('./DbConection.php');
-include_once('../Exceptions/PdoException.php');
+include_once('../../Exceptions/PdoException.php');
 //Todos os arquivos do crud deverão importar o arquivo DBConection;
 
 /*

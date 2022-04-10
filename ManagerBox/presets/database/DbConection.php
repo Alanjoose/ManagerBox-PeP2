@@ -3,7 +3,7 @@
 //@Code->Author: AlanJS;
 //@DBConect file;
 
-define("dbServe", "mysql:host=localhost;dbname=managerbox");
+define("dbServe", "mysql:host=localhost;dbname=MANAGERBOX");
 define("dbUser", "Alan");
 define("dbPassword", "qofv1424");
 /*

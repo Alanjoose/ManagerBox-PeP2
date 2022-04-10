@@ -3,7 +3,7 @@
 //@Code->Author: AlanJS;
 //@Edit Itens file;
 include_once('./DbConection.php');
-include_once('../Exceptions/PdoException.php');
+include_once('../../Exceptions/PdoException.php');
 session_start();
 $pdoException = new PdoException();
 $updateException = new PdoException();
