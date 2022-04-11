@@ -1,16 +1,15 @@
-*
-{
-    margin: 0;
-    padding: 0;
-}
-
-body
-{
-    width: 100%;
+body{
+    margin: auto;
     height: 100%;
     font-size: 18px;
-    font-family: 'Ubuntu', sans-serif;
-    background-color: rgba(255 255 255 0.4);
+    max-width: 100%;
+}
+
+.logo
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 header
@@ -19,14 +18,6 @@ header
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    
-}
-
-.logo
-{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 }
 
 header
@@ -48,6 +39,7 @@ a
     text-decoration: none;
     margin: 5px;
     color: #FF0000;
+    border-radius: 15px;
 }
 
 #Register
@@ -107,13 +99,14 @@ a
     text-decoration: none;
     border: solid 2px #FF0000;
     padding: .5rem;
+    border-radius: 15px;
 }
 
 .function-row
 {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items:center;
     justify-content: space-evenly;
     width: 100%;
     color: #FFF;
@@ -130,7 +123,7 @@ a
 
 .function-icon
 {
-    align-items: center;
+    align-items:center;
     text-align: center;
     justify-content: center;
 }
