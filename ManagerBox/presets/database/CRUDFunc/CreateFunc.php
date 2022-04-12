@@ -19,7 +19,8 @@ $date = date("Y-m-d");
 try
 {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION,);
-    $statement = $pdo->prepare("insert into FUNCIONARIO(CPF, NOME, EMAIL, SENHA, DATACRIACAO) values(?, ?, ?, ?, ?)");
+    $statement = $pdo->prepare("insert into FUNCIONARIO(CPF, NOME, EMAIL, SENHA, DATACRIACAO)
+     values(?, ?, ?, ?, ?)");
     $statement->bindParam(1, $inputCpf);
     $statement->bindParam(2, $inputName);
     $statement->bindParam(3, $inputEmail);
@@ -27,6 +28,7 @@ try
     $statement->bindParam(5, $date);
     $statement->execute();
     echo $statement->rowCount();
+    header('location: ../../../app/cadastrar.html?msg=Funcionario cadastrado com sucesso');
 }
 catch(Exception $default)
 {
