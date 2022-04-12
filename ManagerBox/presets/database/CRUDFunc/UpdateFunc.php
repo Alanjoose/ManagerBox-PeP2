@@ -1,37 +1,72 @@
 <?php
 //@Aplication: ManagerBox;
-//@Code->Author: AlanJS;
+//@Code->Author: AlanJS, Jonatas;
 //@Edit Itens file;
 include_once('../DbConection.php');
-include_once('../../Exceptions/PdoException.php');
 
-session_start();
 
-$pdoException = new PdoException();
-$updateException = new PdoException();
+$inputName = $_POST['name'];
+$inputEmail = $_POST['email'];
+$inputPassword = $_POST['password'];
+$id = $_GET['ID'];
 
-/*
-@TODO: Inserir nesse bloco as variáveis que serão captadas
-pelos inputs no html devidamente filtrados;
-*/
 
-$param = false;
-try
+
+define("dbServe", "mysql:host=localhost;dbname=MANAGERBOX");
+define("dbUser", "Alan");
+define("dbPassword", "qofv1424");
+
+$pdoSec = new PDO("dbServe, dbUser, dbPassword");
+$pdoSec->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+function updateName()
 {
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::CASE_UPPER, PDO::ERRMODE_EXCEPTION);
-    $statement = $pdo->prepare("//Inserir sql statement aqui;");
-
-    //@TODO: Inserir bind values nos campos que equivalem aos novos valores
-    //dos campos referidos na tabela dentro do sql statement;
+    try
+    {
+        global $inputName, $pdoSec, $sqlName, $statementSec, $id;
+        $sqlName = "update FUNCIONARIO set NOME = :n where ID = '$id'";
+        $statementSec->bindValue(':n', $inputName);
+        $statementSec = $pdoSec->prepare($sqlName);
+        $statementSec->execute();
+    }
+    catch(Exception $e)
+    {
+        echo "Error : " . $e->getMessage();
+    }
     
-    $statement->bindValue(":ID", /*IDdasessao*/);
-    $statement->bindValue(":p", $param);
-    $statement->execute();
-    header('location: EditItens.html?msg=Registro atualizado com sucesso');
 }
-catch(Exception $default)
+
+function updateEmail()
 {
-    echo "Error: " . $default->getMessage();
-    echo $updateException->getUpdateErrMsg();
+    try
+    {
+        global $inputEmail, $pdoSec, $sqlName, $statementSec, $id;
+        $sqlEmail = "update FUNCIONARIO set EMAIL = :e where ID = '$id'";
+        $statementSec->bindValue(':e', $$inputEmail);
+        $statementSec = $pdoSec->prepare($sqlEmail);
+        $statementSec->execute();
+    }
+    catch(Exception $e)
+    {
+        echo "Error : " . $e->getMessage();
+    }
+    
+}
+
+function updatePassword()
+{
+    try
+    {
+        global $inputPassword, $pdoSec, $sqlPassword, $statementSec, $id;
+        $sqlPassword = "update FUNCIONARIO set SENHA = :s where ID = '$id'";
+        $statementSec->bindValue(':s', $$inputPassword);
+        $statementSec = $pdoSec->prepare($sqlEmail);
+        $statementSec->execute();
+    }
+    catch(Exception $e)
+    {
+        echo "Error : " . $e->getMessage();
+    }
+    
 }
 ?>
