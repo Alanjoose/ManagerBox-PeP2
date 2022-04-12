@@ -1,5 +1,5 @@
 # ManagerBox
-O manager Box é um projeto da disciplina de Projeto e prática 2 do IFPE - Igarassu, que consiste em uma aplicação web com funções de gerenciamento de estoque para pequenos empreendimentos.
+O Manager Box é um projeto da disciplina de Projeto e prática 2 do IFPE - Igarassu, que consiste em uma aplicação web com funções de gerenciamento de estoque para pequenos empreendimentos.
 <br><br>
 <span>Funcionalidades:</span>
 <ul>
