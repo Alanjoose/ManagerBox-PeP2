@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/item.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <title>Cadastro de Itens</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-image">
+            <img src="../imgs/cadastro.svg" alt="">
+        </div>
+        <div class="form">
+            <form action="../presets/database/CRUDFunc/CreateFunc.php" method="POST">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Cadastra Item</h1>
+                    </div>
+                    <div class="voltar-button">
+                        <button><a href="../index.html">Voltar</a></button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="modelo">DESCRIÇÃO</label>
+                        <input id="email" type="text" name="description" placeholder="Descreva o produto" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="brand">MARCA</label>
+                        <input id="brand" type="text" name="brand" placeholder="Digite a marca do item">
+                    </div>
+                    <div class="input-box">
+                        <label for="model">MODELO</label>
+                        <input id="model" type="text" name="model" placeholder="Ex: esportivo/casual..." required>
+                    </div>   
+
+                    <div class="input-box">
+                        <label for="size">TAMANHO</label>
+                        <input id="size" type="number" name="size" placeholder="Ex: 38" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="amount">QUANTIDADE</label>
+                        <input id="amount" type="number" name="senha" placeholder="Quantidade de caixas" min="1" max="999">
+                        <label for="null">NULO:</label>
+                        <input type="checkbox" name="nulo" id="null" title="Caso a quantidade seja nula, marque aqui.">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="barcode">CÓDIGO DE BARRAS</label>
+                        <input id="barcode" type="number" name="barcode" placeholder="Digite a senha" size="13" required>
+                        <label for="null">NULO:</label>
+                        <input type="checkbox" name="nulo" id="null" title="Caso a quantidade seja nula, marque aqui.">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="price">PREÇO</label>
+                        <input id="price" type="number" name="senha" placeholder="Digite a senha" required>
+                    </div>
+                </div>
+                <div class="continue-button">
+                    <input type="submit" name="cadastrar" value="Cadastrar">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -6,18 +6,23 @@ include_once('./DbConection.php');
 include_once('../../Exceptions/PdoException.php');
 //Todos os arquivos do crud deverão importar o arquivo DBConection;
 
-
-/*
-@TODO: Inserir nesse bloco as variáveis que serão captadas
-pelos inputs no html devidamente filtrados;
-*/
-$pdoException = new PdoException();
-$insertException = new PdoException();
+$description = $_POST['description'];
+$brand = $_POST['brand'];
+$model = $_POST['model'];
+$size = $_POST['size'];
+$entryDate = date('Y:m:d');
+$amount = $_POST['amount'];
+$barCode = $_POST['barcode'];
+$price = $_POST['price'];
 
 try
 {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::CASE_UPPER, PDO::ERRMODE_EXCEPTION);
-    $statement = $pdo->prepare("//Inserir sql statement aqui;");
+
+    $statement = $pdo->prepare("insert into ITENS (DESCRICAO, MARCA, MODELO, TAMANHO,
+    DATAENTRADA, QUANTIDADE, CODIGOBARRAS, PRECO) values ('$description', '$brand', 
+    '$model', '$size', '$entryDate', '$amount', '$barCode', '$price'");
+    
     $statement->execute();
     echo $statement->rowCount();
     header('location: CreateItem.html?msg=Item adicionado com sucesso');

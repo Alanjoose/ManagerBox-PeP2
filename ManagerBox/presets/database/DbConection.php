@@ -13,4 +13,5 @@ Caso não tenha aplicado a padronização em seu banco não esquecer de alterar 
 */
 
 $pdo = new PDO(dbServe, dbUser, dbPassword);
+global $pdo;
 ?>
