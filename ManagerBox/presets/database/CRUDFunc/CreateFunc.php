@@ -5,11 +5,6 @@
 include_once('../DbConection.php'); // /database/DbConection.php;
 //Todos os arquivos do crud deverão importar o arquivo DBConection;
 
-/*
-@TODO: Inserir nesse bloco as variáveis que serão captadas
-pelos inputs no html devidamente filtrados;
-*/
-
 $inputCpf = $_POST['cpf'];
 $inputName = $_POST['name'];
 $inputEmail = $_POST['email'];
@@ -28,7 +23,6 @@ try
     $statement->bindParam(5, $date);
     $statement->execute();
     echo $statement->rowCount();
-    header('location: ../../../app/cadastrar.html?msg=Funcionario cadastrado com sucesso');
 }
 catch(Exception $default)
 {

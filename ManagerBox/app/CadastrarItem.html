@@ -19,7 +19,7 @@
             <form action="../presets/database/CRUDItens/CreateItem.php" method="POST">
                 <div class="form-header">
                     <div class="title">
-                        <h1>Cadastra Item</h1>
+                        <h1>Cadastrar Item</h1>
                     </div>
                     <div class="voltar-button">
                         <button><a href="../index.html">Voltar</a></button>
@@ -48,21 +48,19 @@
 
                     <div class="input-box">
                         <label for="amount">QUANTIDADE</label>
-                        <input id="amount" type="number" name="senha" placeholder="Quantidade de caixas" min="1" max="999">
+                        <input id="amount" type="number" name="amount" placeholder="Quantidade de caixas" min="1" max="999">
                         <label for="null">NULO:</label>
-                        <input type="checkbox" name="nulo" id="null" title="Caso a quantidade seja nula, marque aqui.">
+                        <input type="checkbox" name="null" id="null" title="Caso a quantidade seja nula, marque aqui." value="0">
                     </div>
 
                     <div class="input-box">
                         <label for="barcode">CÓDIGO DE BARRAS</label>
-                        <input id="barcode" type="number" name="barcode" placeholder="Digite a senha" size="13" required>
-                        <label for="null">NULO:</label>
-                        <input type="checkbox" name="nulo" id="null" title="Caso a quantidade seja nula, marque aqui.">
+                        <input id="barcode" type="number" name="barcode" placeholder="Somente números" size="13" required>
                     </div>
 
                     <div class="input-box">
                         <label for="price">PREÇO</label>
-                        <input id="price" type="number" name="senha" placeholder="Digite a senha" required>
+                        <input id="price" type="number" name="price" placeholder="Ex: 70.90" required>
                     </div>
                 </div>
                 <div class="continue-button">

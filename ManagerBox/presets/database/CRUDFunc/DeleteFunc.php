@@ -2,11 +2,7 @@
 //@Aplication: ManagerBox;
 //@Code->Author: AlanJS;
 //@Delete Itens file;
-include_once('./DbConection.php');
-include_once('../../Exceptions/PdoException.php');
-session_start();
-$pdoException = new PdoException();
-$deleteException = new PdoException();
+include_once('../CRUDFunc/DeleteFunc.php');
 
 $itemId = $_POST['IDCodigo'];
 try
@@ -18,6 +14,5 @@ try
 catch(Exception $default)
 {
     echo "Error: " . $default->getMessage();
-    echo $deleteException->getDeleteErrMsg();
 }
 ?>

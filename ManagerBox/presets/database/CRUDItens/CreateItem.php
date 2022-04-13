@@ -2,9 +2,9 @@
 //@Aplication: ManagerBox;
 //@Code->Author: AlanJS;
 //@Create Item file;
-include_once('./DbConection.php');
-include_once('../../Exceptions/PdoException.php');
-//Todos os arquivos do crud deverão importar o arquivo DBConection;
+include_once('../DbConection.php');
+
+session_start();
 
 $description = $_POST['description'];
 $brand = $_POST['brand'];
@@ -17,20 +17,26 @@ $price = $_POST['price'];
 
 try
 {
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::CASE_UPPER, PDO::ERRMODE_EXCEPTION);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $statement = $pdo->prepare("insert into ITENS (DESCRICAO, MARCA, MODELO, TAMANHO,
-    DATAENTRADA, QUANTIDADE, CODIGOBARRAS, PRECO) values ('$description', '$brand', 
-    '$model', '$size', '$entryDate', '$amount', '$barCode', '$price'");
-    
+    DATAENTRADA, QUANTIDADE, FUNREGISTRADOR, CODIGOBARRAS, PRECO) values (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+
+    $statement->bindParam(1, $description);
+    $statement->bindParam(2, $brand);
+    $statement->bindParam(3, $model);
+    $statement->bindParam(4, $size);
+    $statement->bindParam(5, $entryDate);
+    $statement->bindParam(6, $amount);
+    $statement->bindParam(7, $_SESSION['ID']);
+    $statement->bindParam(8, $barCode);
+    $statement->bindParam(9, $price);
+
     $statement->execute();
     echo $statement->rowCount();
-    header('location: CreateItem.html?msg=Item adicionado com sucesso');
 } 
 catch(Exception $default)
 {
-    echo $pdoException->getErrorMsg();
-    echo $insertException->getInsertErrMsg();
     echo "Error:" . $default->getMessage();
 }
 
