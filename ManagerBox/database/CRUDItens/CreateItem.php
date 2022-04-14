@@ -34,6 +34,7 @@ try
 
     $statement->execute();
     echo $statement->rowCount();
+    header('location: ../../app/CadastrarItem.html?msg=Item cadastrado com sucesso');
 } 
 catch(Exception $default)
 {

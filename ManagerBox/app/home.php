@@ -24,7 +24,7 @@ if(!isset($_SESSION['login']) || $_SESSION['login'] !== true)
 	<div id="box">
 		<h1>SEJA BEM VINDO <?= $_SESSION['NOME']?> !</h1>
 		<a href="../presets/database/CRUDFunc/logout.php">Sair</a>
-		<a href="delete.php?id=<?= $_SESSION['ID'] ?>"> Excluir Conta</a>
+		<a href="../database/CRUDFunc/DeleteFunc.php"> Excluir Conta</a>
 		<a href="./CadastrarItem.html">Cadastrar item</a>
 		
 	</div>

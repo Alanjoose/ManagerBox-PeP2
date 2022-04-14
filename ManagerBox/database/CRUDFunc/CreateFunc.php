@@ -23,6 +23,7 @@ try
     $statement->bindParam(5, $date);
     $statement->execute();
     echo $statement->rowCount();
+    header('location: ../../app/login.html');
 }
 catch(Exception $default)
 {
