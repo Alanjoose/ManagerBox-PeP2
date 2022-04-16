@@ -10,9 +10,14 @@
     <title>Editando item como <?=$_SESSION['NOME']?></title>
     <link rel="icon" href="./box.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./styles/item.css">
+    <link rel="stylesheet" href="./styles/global.css">
 </head>
 <body>
 <div class="container">
+        <div class="form-image">
+            <img src="imgs/item.svg" alt="">
+        </div>
         <div class="form">
             <form action="../database/CRUDItens/CreateItem.php" method="POST">
                 <div class="form-header">
@@ -20,7 +25,7 @@
                         <h1>Editar registro</h1>
                     </div>
                     <div class="voltar-button">
-                        <button><a href="./home.php">Voltar</a></button>
+                        <button><a href="./Home.php">Voltar</a></button>
                     </div>
                 </div>
 

@@ -61,10 +61,6 @@ body {
     cursor: pointer;
 }
 
-.voltar-button button:hover {
-    background-color: rgba(121, 1, 139, 0.74);
-}
-
 .voltar-button button a {
     text-decoration: none;
     font-weight: 500;
@@ -103,10 +99,6 @@ body {
     box-shadow: 1px 1px 6px #0000001c;
     font-size: 0.8rem;
     filter: drop-shadow(2px 2px 2px #000);
-}
-
-.input-box input:hover {
-    background-color: rgba(121, 1, 139, 0.74);
 }
 
 .input-box input:focus-visible {
