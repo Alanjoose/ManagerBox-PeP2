@@ -1,63 +1,26 @@
-<?php
-//@Aplication: ManagerBox;
-//@Code->Author: Jonatas;
-//@Edit Home file;
-include_once '../presets/database/DbConection.php';
-session_start();
-if(!isset($_SESSION['login']) || $_SESSION['login'] !== true)
-{
-	header('location: ./login.html');
-	exit();
-}
-?>
-
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-br">
 <head>
-	<title>Bem Vindo!</title>
-	<link rel="stylesheet" href="./styles/style.css">
-	<link rel="stylesheet" href="./styles/home.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" 
+    integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5"
+    crossorigin="anonymous" />
+    <title>Editando item como <?=$_SESSION['NOME']?></title>
+    <link rel="icon" href="./box.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
-
 <body>
-	<div id="box">
-		<h1>SEJA BEM VINDO <?= $_SESSION['NOME']?> !</h1>
-		<a href="../presets/database/CRUDFunc/logout.php">Sair</a>
-		<a href="../database/CRUDFunc/DeleteFunc.php"> Excluir Conta</a>
-		<a href="./CadastrarItem.html">Cadastrar item</a>
-		
-	</div>
-
-	<ul>
-		<?php
-		$listagem = $pdo->prepare("select * from ITENS");
-		$listagem->execute();
-		while($lista = $listagem->fetch(PDO::FETCH_ASSOC)):
-		?>
-		<li><?php echo $list['ID']?> - <?php echo $list['DESCRICAO']?> - <?php echo $list['MARCA']?>
-		- <?php echo $list['MODELO']?> - <?php echo $list['TAMANHO']?> - <?php echo $list['DATAENTRADA']?>
-		- <?php echo $list['QUANTIDADE']?> - <?php echo $list['FUNREGISTRADOR']?> - <?php echo $list['CODIGOBARRAS']?>
-		- <?php echo $list['PRECO']?></li>
-		<?php
-		endwhile;
-		?>
-	</ul>
-
-	<main class="box">
-		<form action="save.php" method="POST">
-			<h2> </h2>
-			<input type="text" name="iten" placeholder="Iten">
-			<input type="number" name="tamanho" placeholder="Tamanho">
-			<input type="Submit" Value="Salvar">
-		</form>
-		<form action="../presets/database/CRUDItens/CreateItem.php" method="POST">
+<div class="container">
+        <div class="form">
+            <form action="../database/CRUDItens/CreateItem.php" method="POST">
                 <div class="form-header">
                     <div class="title">
-                        <h1>Cadastrar Item</h1>
+                        <h1>Editar registro</h1>
                     </div>
                     <div class="voltar-button">
-                        <button><a href="../index.html">Voltar</a></button>
+                        <button><a href="./home.php">Voltar</a></button>
                     </div>
                 </div>
 
@@ -95,14 +58,14 @@ if(!isset($_SESSION['login']) || $_SESSION['login'] !== true)
 
                     <div class="input-box">
                         <label for="price">PREÇO</label>
-                        <input id="price" type="number" name="price" placeholder="Ex: 70.90" required>
+                        <input id="price" type="number" name="price" placeholder="Ex: 70.90" step="0.01" required>
                     </div>
                 </div>
                 <div class="continue-button">
                     <input type="submit" name="cadastrar" value="Cadastrar">
                 </div>
             </form>
-	</main>
+        </div>
+    </div>
 </body>
-
 </html>

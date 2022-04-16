@@ -12,6 +12,16 @@ Caso não tenha aplicado a padronização em seu banco não esquecer de alterar 
  das constantes para utilizar o banco gerado pelo script sql;
 */
 
-$pdo = new PDO(dbServe, dbUser, dbPassword);
-global $pdo;
+try
+{
+    $pdo = new PDO(dbServe, dbUser, dbPassword);
+}
+catch(PDOException $pe)
+{
+    echo $pe->getMessage();
+}
+catch(Exception $e)
+{
+    echo $e->getMessage();
+}
 ?>

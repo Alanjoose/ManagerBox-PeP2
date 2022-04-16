@@ -4,6 +4,6 @@ session_start();
 
 session_destroy();
 
-header('../../app/index.html');
+header('location: ../../app/login.html');
 
 ?>

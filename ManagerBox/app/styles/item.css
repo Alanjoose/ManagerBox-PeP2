@@ -90,7 +90,7 @@ body {
 .input-box {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1.1rem;
+    margin: .5rem;
 }
 
 .input-box input {
@@ -100,6 +100,7 @@ body {
     border-radius: 10px;
     box-shadow: 1px 1px 6px #0000001c;
     font-size: 0.8rem;
+    filter: drop-shadow(2px 2px 2px #000);
 }
 
 .input-box input:hover {
@@ -118,6 +119,7 @@ body {
 
 .input-box input::placeholder {
     color: #000000be;
+    font-weight: bold;
 }
 
 

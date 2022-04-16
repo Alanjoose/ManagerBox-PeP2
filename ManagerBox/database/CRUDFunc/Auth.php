@@ -22,7 +22,7 @@ if($user === false)
 
 else
 {
-    header('location: ../../app/home.php');
+    header('location: ../../app/Home.php');
 }
 
 session_start();

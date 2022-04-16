@@ -1,0 +1,47 @@
+.user-box
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.user-box
+i
+{
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.functions
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.button
+{
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.button
+i
+{
+    font-size: 2em;
+}
+
+.function-btn
+{
+    border-color: #FF0000;
+    border-radius: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #000;
+}
+
+.nav
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    outline: solid 1px #000;
+}
