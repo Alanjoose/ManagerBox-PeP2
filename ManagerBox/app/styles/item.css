@@ -11,6 +11,8 @@ body {
 }
 
 .container {
+    border-radius: 0 15px 15px 0;
+    border: 2px solid rgb(77, 20, 140);
     width: 80%;
     height: 80vh;
     display: flex;
@@ -22,7 +24,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #FF0000;
+    background-color: rgb(77, 20, 140);
     padding: 1rem;
 }
 
@@ -53,14 +55,14 @@ body {
 
 .voltar-button button {
     border: none;
-    background-color: #FF0000;
+    background-color: rgb(77, 20, 140);
     padding: 0.4rem 1rem;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .voltar-button button:hover {
-    background-color: tomato;
+    background-color: rgba(121, 1, 139, 0.74);
 }
 
 .voltar-button button a {
@@ -74,7 +76,7 @@ body {
     display: block;
     width: 5rem;
     height: 0.3rem;
-    background-color: #FF0000;
+    background-color: rgb(77, 20, 140);
     margin: 0 auto;
     position: absolute;
     border-radius: 10px;
@@ -104,11 +106,11 @@ body {
 }
 
 .input-box input:hover {
-    background-color: tomato;
+    background-color: rgba(121, 1, 139, 0.74);
 }
 
 .input-box input:focus-visible {
-    outline: 1px solid #FF0000;
+    outline: 1px solid rgb(77, 20, 140);
 }
 
 .input-box label{
@@ -127,14 +129,14 @@ body {
     width: 100%;
     margin-top: 2.5rem;
     border: none;
-    background-color: #FF0000;
+    background-color: rgb(77, 20, 140);
     padding: 0.62rem;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .continue-button input:hover {
-    border-color: #FF0000;
+    border-color: rgb(77, 20, 140);
 }
 
 .continue-button  input {
@@ -170,4 +172,18 @@ body {
         overflow-y: scroll;
         flex-wrap: nowrap;
     }
+}
+
+/*Barra de rolagem*/
+
+body::-webkit-scrollbar {
+    width: 10px;
+
+}
+
+/*Barra de rolagem*/
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(77, 20, 140);
+    border-radius: 20px;
 }

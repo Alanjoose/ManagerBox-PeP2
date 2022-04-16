@@ -26,7 +26,7 @@ i
 {
     margin: 10px;
     font-size: 2.8em;
-    color: #FF0000;
+    color: rgb(77, 20, 140);
     filter: drop-shadow(3px 3px 3px #000);
 }
 
@@ -38,13 +38,13 @@ a
 {
     text-decoration: none;
     margin: 5px;
-    color: #FF0000;
+    color: rgb(77, 20, 140);
     border-radius: 15px;
 }
 
 #Register
 {
-    border: solid 2px #FF0000;
+    border: solid 2px rgb(77, 20, 140);
     padding: .5rem;
 }
 
@@ -80,14 +80,14 @@ main
 h2::first-letter
 {
     font-size: 1.5em;
-    color: #FF0000;
+    color: rgb(77, 20, 140);
 }
 
 main
 .text
 p
 {
-    color: #FF0000;
+    color: rgb(77, 20, 140);
 }
 
 main
@@ -97,7 +97,7 @@ a
 {
     margin: 1rem;
     text-decoration: none;
-    border: solid 2px #FF0000;
+    border: solid 2px rgb(77, 20, 140);
     padding: .5rem;
     border-radius: 15px;
 }
@@ -137,4 +137,18 @@ button
     outline: none;
     border: solid 2px;
     cursor: pointer;
+}
+
+/*Barra de rolagem*/
+
+body::-webkit-scrollbar {
+    width: 10px;
+
+}
+
+/*Barra de rolagem*/
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(77, 20, 140);
+    border-radius: 20px;
 }
