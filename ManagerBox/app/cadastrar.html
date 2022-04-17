@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./styles/global.css">
     <title>Cadastrar-se</title>
     <link rel="icon" href="./box.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -44,7 +45,9 @@
 
                     <div class="input-box">
                         <label for="senha">Senha</label>
+                        
                         <input id="senha" type="password" name="password" placeholder="Digite a senha" required>
+                        <i class="fa fa-eye" aria-hidden="true"></i>
                     </div>
 
                 </div>
@@ -52,8 +55,13 @@
                     <input type="submit" name="" value="Cadastrar">
                 </div>
             </form>
+            <br>
+            <div class="question">
+                <p>Já possui uma conta? <a href="login.html">Entre</a></p>
+            </div>
         </div>
     </div>
 </body>
+<script src="scripts/senha.js"></script>
 
 </html>

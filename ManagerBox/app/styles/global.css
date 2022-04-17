@@ -10,3 +10,25 @@ body
     background-color: rgba(255 255 255 0.4);
 }
 
+.question p{
+    color: rgb(77, 20, 140);
+    font-size: 12pt;
+    text-align: center;
+}
+
+.question a{
+    color: #7a3077;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.question a:hover{
+    transition: all .3 ease-out;
+    color: rgb(77, 20, 140);
+}
+
+.fa-eye{
+    position: static;
+    cursor: pointer;
+    color: #272262;
+}

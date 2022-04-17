@@ -17,6 +17,7 @@ body {
     height: 80vh;
     display: flex;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+    border-radius: 15px;
 }
 
 .form-image {
@@ -26,6 +27,7 @@ body {
     align-items: center;
     background-color: rgb(77, 20, 140);
     padding: 1rem;
+    border-radius: 15px;
 }
 
 .form-image img {
@@ -137,7 +139,6 @@ body {
     font-weight: 500;
     color: #fff;
 }
-
 
 @media screen and (max-width: 1330px) {
     .form-image {

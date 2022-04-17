@@ -44,7 +44,7 @@ body {
     border: none;
     background-color: rgb(77, 20, 140);
     padding: 0.4rem 1rem;
-    border-radius: 15px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -89,7 +89,7 @@ body {
     margin: 0.6rem 0;
     padding: 1rem 2rem;
     border: none;
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: 1px 1px 6px #0000001c;
     font-size: 0.8rem;
     filter: drop-shadow(2px 2px 2px #000);
@@ -117,7 +117,7 @@ body {
     border: none;
     background-color: rgb(77, 20, 140);
     padding: 0.62rem;
-    border-radius: 15px;
+    border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
     font-size: 0.93rem;
